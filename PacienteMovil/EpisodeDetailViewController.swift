@@ -53,10 +53,15 @@ class EpisodeDetailViewController: UIViewController {
                 symptomViewController.patient = patient
                 symptomViewController.episode = episode
             }
-            if segue.identifier == "showSports" {
+            else if segue.identifier == "showSports" {
                 let sportsViewController = segue.destinationViewController as ShowSportsController
                 sportsViewController.patient = patient
                 sportsViewController.episode = episode
+            }
+            else if segue.identifier == "showFoods" {
+                let foodsViewController = segue.destinationViewController as ShowFoodController
+                foodsViewController.patient = patient
+                foodsViewController.episode = episode
             }
         }
         
@@ -78,7 +83,14 @@ class EpisodeDetailViewController: UIViewController {
             }
         }
     }
-    
+
+    @IBAction func showFoods(sender: AnyObject) {
+        if patient != nil {
+            if episode != nil {
+                performSegueWithIdentifier("showFoods", sender: sender)
+            }
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
