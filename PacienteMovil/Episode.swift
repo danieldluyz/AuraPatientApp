@@ -20,6 +20,7 @@ struct Episode {
     var symptoms: [Symptom] = []
     var sports: [Sport] = []
     var foods: [Food] = []
+    var medicines: [Medicine] = []
     
     init (episodeDictionary: NSDictionary, patientId: String) {
         
@@ -53,6 +54,14 @@ struct Episode {
             let foodDictionary: NSDictionary = food as NSDictionary
             let newFood = Food(foodDictionary: foodDictionary, episode: self)
             foods.append(newFood)
+        }
+        
+        let medicinesRetrieved: NSArray = episodeDictionary["medicines"] as NSArray
+        
+        for medicine in medicinesRetrieved{
+            let medicineDictionary: NSDictionary = medicine as NSDictionary
+            let newMedicine = Medicine(medicineDictionary: medicineDictionary, episode: self)
+            medicines.append(newMedicine)
         }
     }
 }

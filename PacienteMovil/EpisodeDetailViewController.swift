@@ -63,6 +63,11 @@ class EpisodeDetailViewController: UIViewController {
                 foodsViewController.patient = patient
                 foodsViewController.episode = episode
             }
+            else if segue.identifier == "showMedicines" {
+                let medicinesViewController = segue.destinationViewController as ShowMedicinesViewController
+                medicinesViewController.patient = patient
+                medicinesViewController.episode = episode
+            }
         }
         
     }
@@ -88,6 +93,14 @@ class EpisodeDetailViewController: UIViewController {
         if patient != nil {
             if episode != nil {
                 performSegueWithIdentifier("showFoods", sender: sender)
+            }
+        }
+    }
+    
+    @IBAction func showMedicines(sender: AnyObject) {
+        if patient != nil {
+            if episode != nil {
+                performSegueWithIdentifier("showMedicines", sender: sender)
             }
         }
     }
