@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PacienteMovil
 //
-//  Created by Sebastian Valencia on 3/22/15.
+//  Created by clau on 3/22/15.
 //  Copyright (c) 2015 com.aura. All rights reserved.
 //
 

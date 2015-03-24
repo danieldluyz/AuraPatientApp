@@ -7,12 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E34F3EE1ABF36C9008979F8 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */; };
+		8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */; };
+		8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B1DC21AC10FC0007B7980 /* Symptom.swift */; };
+		8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */; };
+		8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */; };
+		8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A291ABF600600AF58A2 /* Episode.swift */; };
+		8EAC8A2C1ABFA24800AF58A2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */; };
+		8EAC8A2E1ABFB50100AF58A2 /* ShowResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */; };
 		E54158871ABEFF33001746FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158861ABEFF33001746FF /* AppDelegate.swift */; };
 		E54158891ABEFF33001746FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158881ABEFF33001746FF /* ViewController.swift */; };
 		E541588C1ABEFF33001746FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E541588A1ABEFF33001746FF /* Main.storyboard */; };
 		E541588E1ABEFF33001746FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E541588D1ABEFF33001746FF /* Images.xcassets */; };
 		E54158911ABEFF33001746FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E541588F1ABEFF33001746FF /* LaunchScreen.xib */; };
 		E541589D1ABEFF33001746FF /* PacienteMovilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541589C1ABEFF33001746FF /* PacienteMovilTests.swift */; };
+		E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */; };
+		E54158D91AC14282001746FF /* AddSymptomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158D81AC14281001746FF /* AddSymptomController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		8E6B1DC21AC10FC0007B7980 /* Symptom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
+		8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSymptomsController.swift; sourceTree = "<group>"; };
+		8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		8EAC8A291ABF600600AF58A2 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowResultsController.swift; sourceTree = "<group>"; };
 		E54158811ABEFF33001746FF /* PacienteMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacienteMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54158851ABEFF33001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54158861ABEFF33001746FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +54,8 @@
 		E54158961ABEFF33001746FF /* PacienteMovilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacienteMovilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E541589B1ABEFF33001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E541589C1ABEFF33001746FF /* PacienteMovilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacienteMovilTests.swift; sourceTree = "<group>"; };
+		E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEpisodeNormalController.swift; path = ../AddEpisodeNormalController.swift; sourceTree = "<group>"; };
+		E54158D81AC14281001746FF /* AddSymptomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSymptomController.swift; path = ../AddSymptomController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +98,16 @@
 			isa = PBXGroup;
 			children = (
 				E54158861ABEFF33001746FF /* AppDelegate.swift */,
+				8EAC8A291ABF600600AF58A2 /* Episode.swift */,
+				E54158D81AC14281001746FF /* AddSymptomController.swift */,
+				8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */,
+				E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */,
+				8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */,
+				8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */,
+				8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */,
+				8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */,
+				8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */,
+				8E6B1DC21AC10FC0007B7980 /* Symptom.swift */,
 				E54158881ABEFF33001746FF /* ViewController.swift */,
 				E541588A1ABEFF33001746FF /* Main.storyboard */,
 				E541588D1ABEFF33001746FF /* Images.xcassets */,
@@ -213,7 +243,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54158891ABEFF33001746FF /* ViewController.swift in Sources */,
+				8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */,
+				E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */,
+				8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */,
+				8EAC8A2C1ABFA24800AF58A2 /* SearchController.swift in Sources */,
+				8E34F3EE1ABF36C9008979F8 /* EpisodeDetailViewController.swift in Sources */,
+				8EAC8A2E1ABFB50100AF58A2 /* ShowResultsController.swift in Sources */,
+				E54158D91AC14282001746FF /* AddSymptomController.swift in Sources */,
 				E54158871ABEFF33001746FF /* AppDelegate.swift in Sources */,
+				8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */,
+				8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */,
+				8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +445,7 @@
 				E54158A21ABEFF33001746FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E54158A31ABEFF33001746FF /* Build configuration list for PBXNativeTarget "PacienteMovilTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +454,7 @@
 				E54158A51ABEFF33001746FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
