@@ -53,6 +53,11 @@ class EpisodeDetailViewController: UIViewController {
                 symptomViewController.patient = patient
                 symptomViewController.episode = episode
             }
+            if segue.identifier == "showSports" {
+                let sportsViewController = segue.destinationViewController as ShowSportsController
+                sportsViewController.patient = patient
+                sportsViewController.episode = episode
+            }
         }
         
     }
@@ -62,6 +67,14 @@ class EpisodeDetailViewController: UIViewController {
         if patient != nil {
             if episode != nil {
                 performSegueWithIdentifier("showSymptoms", sender: sender)
+            }
+        }
+    }
+    
+    @IBAction func showSports(sender: AnyObject) {
+        if patient != nil {
+            if episode != nil {
+                performSegueWithIdentifier("showSports", sender: sender)
             }
         }
     }

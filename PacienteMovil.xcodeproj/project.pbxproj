@@ -15,6 +15,8 @@
 		8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A291ABF600600AF58A2 /* Episode.swift */; };
 		8EAC8A2C1ABFA24800AF58A2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */; };
 		8EAC8A2E1ABFB50100AF58A2 /* ShowResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */; };
+		8EC0C9921AC1A087009D1EFF /* ShowSportsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C9911AC1A087009D1EFF /* ShowSportsController.swift */; };
+		8EC0C9941AC1A35C009D1EFF /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C9931AC1A35B009D1EFF /* Sport.swift */; };
 		E54158871ABEFF33001746FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158861ABEFF33001746FF /* AppDelegate.swift */; };
 		E54158891ABEFF33001746FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158881ABEFF33001746FF /* ViewController.swift */; };
 		E541588C1ABEFF33001746FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E541588A1ABEFF33001746FF /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		8EAC8A291ABF600600AF58A2 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowResultsController.swift; sourceTree = "<group>"; };
+		8EC0C9911AC1A087009D1EFF /* ShowSportsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSportsController.swift; sourceTree = "<group>"; };
+		8EC0C9931AC1A35B009D1EFF /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		E54158811ABEFF33001746FF /* PacienteMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacienteMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54158851ABEFF33001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54158861ABEFF33001746FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +110,9 @@
 				8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */,
 				8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */,
 				8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */,
+				8EC0C9911AC1A087009D1EFF /* ShowSportsController.swift */,
 				8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */,
+				8EC0C9931AC1A35B009D1EFF /* Sport.swift */,
 				8E6B1DC21AC10FC0007B7980 /* Symptom.swift */,
 				E54158881ABEFF33001746FF /* ViewController.swift */,
 				E541588A1ABEFF33001746FF /* Main.storyboard */,
@@ -242,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC0C9941AC1A35C009D1EFF /* Sport.swift in Sources */,
 				E54158891ABEFF33001746FF /* ViewController.swift in Sources */,
 				8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */,
 				E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */,
@@ -251,6 +258,7 @@
 				8EAC8A2E1ABFB50100AF58A2 /* ShowResultsController.swift in Sources */,
 				E54158D91AC14282001746FF /* AddSymptomController.swift in Sources */,
 				E54158871ABEFF33001746FF /* AppDelegate.swift in Sources */,
+				8EC0C9921AC1A087009D1EFF /* ShowSportsController.swift in Sources */,
 				8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */,
 				8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */,
 				8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */,

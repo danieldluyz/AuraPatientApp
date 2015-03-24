@@ -18,6 +18,7 @@ struct Episode {
     var stress: Bool
     var patientId: String
     var symptoms: [Symptom] = []
+    var sports: [Sport] = []
     
     init (episodeDictionary: NSDictionary, patientId: String) {
         
@@ -36,5 +37,14 @@ struct Episode {
             let newSymptom = Symptom(symptomDictionary: symptomDictionary, episode: self)
             symptoms.append(newSymptom)
         }
+        
+        let sportsRetrieved: NSArray = episodeDictionary["sports"] as NSArray
+        
+        for sport in sportsRetrieved{
+            let sportDictionary: NSDictionary = sport as NSDictionary
+            let newSport = Sport(sportDictionary: sportDictionary, episode: self)
+            sports.append(newSport)
+        }
+        
     }
 }
