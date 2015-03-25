@@ -14,6 +14,7 @@ class DoneViewController: UIViewController {
     
     @IBOutlet weak var listenbut: UIButton!
     
+    
     @IBOutlet weak var stopbut: UIButton!
     var recivedAudio: RecordedAudio!
     override func viewDidLoad() {
