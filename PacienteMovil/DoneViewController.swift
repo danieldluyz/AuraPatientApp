@@ -11,6 +11,10 @@ import AVFoundation
 
 class DoneViewController: UIViewController {
     var audioPlayer: AVAudioPlayer!
+    
+    @IBOutlet weak var listenbut: UIButton!
+    
+    @IBOutlet weak var stopbut: UIButton!
     var recivedAudio: RecordedAudio!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +38,13 @@ class DoneViewController: UIViewController {
     
     @IBAction func playAudio(sender: AnyObject) {
         audioPlayer.play()
+        listenbut.enabled =  false
     }
     
     @IBAction func stopsound(sender: AnyObject) {
         audioPlayer.stop()
+        listenbut.enabled = true
+        
     }
     /*
     // MARK: - Navigation

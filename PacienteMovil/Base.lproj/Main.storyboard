@@ -443,18 +443,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4d-S4-JDS">
-                                <rect key="frame" x="101" y="465" width="105" height="50"/>
-                                <state key="normal" image="stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imagen2Patient" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-ld-4pb">
-                                <rect key="frame" x="0.0" y="53" width="320" height="154"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gF2-ld-4pb" secondAttribute="height" multiplier="160:77" id="lzX-7c-uLj"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3s-Ez-Odb">
                                 <rect key="frame" x="40" y="277" width="241" height="35"/>
                                 <color key="backgroundColor" red="0.19982413919178232" green="0.35672727275943678" blue="0.48137626262626265" alpha="0.55000000000000004" colorSpace="calibratedRGB"/>
@@ -463,11 +451,33 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="Hnt-ZR-zMU" eventType="touchUpInside" id="DiV-8m-hpE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="imagen2Patient" translatesAutoresizingMaskIntoConstraints="NO" id="gF2-ld-4pb">
+                                <rect key="frame" x="0.0" y="53" width="320" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gF2-ld-4pb" secondAttribute="height" multiplier="160:77" id="lzX-7c-uLj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4d-S4-JDS">
+                                <rect key="frame" x="117" y="465" width="87" height="50"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopsound:" destination="Hnt-ZR-zMU" eventType="touchUpInside" id="FOO-ft-9Q0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YWx-oI-M4H"/>
+                    <connections>
+                        <outlet property="listenbut" destination="V3s-Ez-Odb" id="tjC-wL-fl6"/>
+                        <outlet property="stopbut" destination="Y4d-S4-JDS" id="OfE-9H-Rlq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PKZ-kZ-dL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
