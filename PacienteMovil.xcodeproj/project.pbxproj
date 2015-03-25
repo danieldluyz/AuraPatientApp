@@ -32,6 +32,9 @@
 		E541589D1ABEFF33001746FF /* PacienteMovilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541589C1ABEFF33001746FF /* PacienteMovilTests.swift */; };
 		E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */; };
 		E54158D91AC14282001746FF /* AddSymptomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158D81AC14281001746FF /* AddSymptomController.swift */; };
+		E5DC62751AC2762D000277E0 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC62741AC2762D000277E0 /* AudioViewController.swift */; };
+		E5DC62771AC27790000277E0 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC62761AC27790000277E0 /* DoneViewController.swift */; };
+		E5DC62791AC27855000277E0 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC62781AC27855000277E0 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		E541589C1ABEFF33001746FF /* PacienteMovilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacienteMovilTests.swift; sourceTree = "<group>"; };
 		E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEpisodeNormalController.swift; path = ../AddEpisodeNormalController.swift; sourceTree = "<group>"; };
 		E54158D81AC14281001746FF /* AddSymptomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddSymptomController.swift; path = ../AddSymptomController.swift; sourceTree = "<group>"; };
+		E5DC62741AC2762D000277E0 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		E5DC62761AC27790000277E0 /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		E5DC62781AC27855000277E0 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,9 @@
 				E54158861ABEFF33001746FF /* AppDelegate.swift */,
 				E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */,
 				8EC467631AC2349300FCA009 /* AddFoodToEpisodeController.swift */,
+				E5DC62761AC27790000277E0 /* DoneViewController.swift */,
+				E5DC62741AC2762D000277E0 /* AudioViewController.swift */,
+				E5DC62781AC27855000277E0 /* RecordedAudio.swift */,
 				8EC467651AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift */,
 				8EC467671AC2427700FCA009 /* AddSportsToEpisodeController.swift */,
 				E54158D81AC14281001746FF /* AddSymptomController.swift */,
@@ -269,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DC62791AC27855000277E0 /* RecordedAudio.swift in Sources */,
 				8EC0C9941AC1A35C009D1EFF /* Sport.swift in Sources */,
 				8EC0C99A1AC1B336009D1EFF /* Medicine.swift in Sources */,
 				E54158891ABEFF33001746FF /* ViewController.swift in Sources */,
+				E5DC62771AC27790000277E0 /* DoneViewController.swift in Sources */,
 				8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */,
 				E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */,
 				8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */,
@@ -288,6 +299,7 @@
 				8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */,
 				8EC0C9981AC1AC78009D1EFF /* Food.swift in Sources */,
 				8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */,
+				E5DC62751AC2762D000277E0 /* AudioViewController.swift in Sources */,
 				8EC467661AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift in Sources */,
 				8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */,
 			);

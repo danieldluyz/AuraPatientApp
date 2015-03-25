@@ -104,6 +104,16 @@ class PatientViewController: UIViewController {
                 let addViewController = segue.destinationViewController as AddEpisodeNormalController
                 addViewController.patient = patient!
             }
+            
+            else if segue.identifier == "audioSegue" {
+                
+                println("yyyyyyyyyyyy")
+                let aViewController = segue.destinationViewController as AudioViewController
+                
+
+                            
+                
+            }
         }
         
     }
@@ -115,6 +125,13 @@ class PatientViewController: UIViewController {
         }
     }
     
+    @IBAction func recordAudioN(sender: AnyObject) {
+        
+        if patient != nil {
+            println("aaaaaaaaaa")
+            performSegueWithIdentifier("audioSegue", sender: sender)
+        }
+    }
     
     @IBAction func searchBetweenDates(sender: AnyObject) {
         
