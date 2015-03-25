@@ -20,4 +20,11 @@ struct Food {
         self.episode = episode
     }
     
+    init (name: String, quantity: Int, episode: Episode)
+    {
+        self.name = name
+        self.quantity = quantity
+        self.episode = episode
+    }
+    
 }

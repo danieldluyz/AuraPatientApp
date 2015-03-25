@@ -64,4 +64,16 @@ struct Episode {
             medicines.append(newMedicine)
         }
     }
+    
+    
+    init (date: String, strength: Int, timeSlept: Int, normalSleepingCycle: Bool, place: Int, stress: Bool, patientId: String)
+    {
+        self.date = date
+        self.strength = strength
+        self.timeSlept = timeSlept
+        self.normalSleepingCycle = normalSleepingCycle
+        self.place = place
+        self.stress = stress
+        self.patientId = patientId
+    }
 }

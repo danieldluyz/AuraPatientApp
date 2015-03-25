@@ -20,8 +20,10 @@ struct Medicine {
         self.episode = episode
     }
     
-    
-    
-    
-    
+    init (name: String, hoursAgo: Int, episode: Episode)
+    {
+        self.name = name
+        self.hoursAgo = hoursAgo
+        self.episode = episode
+    }
 }

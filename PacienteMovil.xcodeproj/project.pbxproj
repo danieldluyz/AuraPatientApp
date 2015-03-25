@@ -21,6 +21,9 @@
 		8EC0C9981AC1AC78009D1EFF /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C9971AC1AC78009D1EFF /* Food.swift */; };
 		8EC0C99A1AC1B336009D1EFF /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C9991AC1B336009D1EFF /* Medicine.swift */; };
 		8EC0C99C1AC1B472009D1EFF /* ShowMedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0C99B1AC1B472009D1EFF /* ShowMedicinesViewController.swift */; };
+		8EC467641AC2349300FCA009 /* AddFoodToEpisodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC467631AC2349300FCA009 /* AddFoodToEpisodeController.swift */; };
+		8EC467661AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC467651AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift */; };
+		8EC467681AC2427700FCA009 /* AddSportsToEpisodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC467671AC2427700FCA009 /* AddSportsToEpisodeController.swift */; };
 		E54158871ABEFF33001746FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158861ABEFF33001746FF /* AppDelegate.swift */; };
 		E54158891ABEFF33001746FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54158881ABEFF33001746FF /* ViewController.swift */; };
 		E541588C1ABEFF33001746FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E541588A1ABEFF33001746FF /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		8EC0C9971AC1AC78009D1EFF /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		8EC0C9991AC1B336009D1EFF /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		8EC0C99B1AC1B472009D1EFF /* ShowMedicinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMedicinesViewController.swift; sourceTree = "<group>"; };
+		8EC467631AC2349300FCA009 /* AddFoodToEpisodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodToEpisodeController.swift; sourceTree = "<group>"; };
+		8EC467651AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicinesToEpisodeController.swift; sourceTree = "<group>"; };
+		8EC467671AC2427700FCA009 /* AddSportsToEpisodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSportsToEpisodeController.swift; sourceTree = "<group>"; };
 		E54158811ABEFF33001746FF /* PacienteMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacienteMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54158851ABEFF33001746FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54158861ABEFF33001746FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 			children = (
 				E54158861ABEFF33001746FF /* AppDelegate.swift */,
 				E54158D61AC12C87001746FF /* AddEpisodeNormalController.swift */,
+				8EC467631AC2349300FCA009 /* AddFoodToEpisodeController.swift */,
+				8EC467651AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift */,
+				8EC467671AC2427700FCA009 /* AddSportsToEpisodeController.swift */,
 				E54158D81AC14281001746FF /* AddSymptomController.swift */,
 				8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */,
 				8EAC8A291ABF600600AF58A2 /* Episode.swift */,
@@ -267,7 +276,9 @@
 				E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */,
 				8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */,
 				8EAC8A2C1ABFA24800AF58A2 /* SearchController.swift in Sources */,
+				8EC467641AC2349300FCA009 /* AddFoodToEpisodeController.swift in Sources */,
 				8EC0C9961AC1AC34009D1EFF /* ShowFoodController.swift in Sources */,
+				8EC467681AC2427700FCA009 /* AddSportsToEpisodeController.swift in Sources */,
 				8E34F3EE1ABF36C9008979F8 /* EpisodeDetailViewController.swift in Sources */,
 				8EC0C99C1AC1B472009D1EFF /* ShowMedicinesViewController.swift in Sources */,
 				8EAC8A2E1ABFB50100AF58A2 /* ShowResultsController.swift in Sources */,
@@ -277,6 +288,7 @@
 				8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */,
 				8EC0C9981AC1AC78009D1EFF /* Food.swift in Sources */,
 				8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */,
+				8EC467661AC23FEE00FCA009 /* AddMedicinesToEpisodeController.swift in Sources */,
 				8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

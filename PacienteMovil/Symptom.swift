@@ -18,4 +18,10 @@ struct Symptom {
         self.episode = episode
     }
     
+    init (symptom: Int, episode: Episode)
+    {
+        self.symptom = symptom
+        self.episode = episode
+    }
+    
 }

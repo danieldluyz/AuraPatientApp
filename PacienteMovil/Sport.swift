@@ -26,5 +26,14 @@ struct Sport {
         self.episode = episode
     }
     
+    init (description: Int, intensity: Int, place: Int, climate: Int, hydration: Bool, episode: Episode)
+    {
+        self.description = description
+        self.intensity = intensity
+        self.place = place
+        self.climate = climate
+        self.hydration = hydration
+        self.episode = episode
+    }
     
 }
