@@ -26,4 +26,11 @@ struct Medicine {
         self.hoursAgo = hoursAgo
         self.episode = episode
     }
+    
+    func toDictionary() -> NSDictionary {
+        
+        let dictionary = NSDictionary(objects: [name, hoursAgo], forKeys: ["name", "hoursAgo"])
+        return dictionary
+    }
+    
 }

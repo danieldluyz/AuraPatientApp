@@ -24,4 +24,10 @@ struct Symptom {
         self.episode = episode
     }
     
+    func toDictionary() -> NSDictionary {
+        
+        let dictionary = NSDictionary(objects: [symptom], forKeys: ["symptom"])
+        return dictionary
+    }
+    
 }

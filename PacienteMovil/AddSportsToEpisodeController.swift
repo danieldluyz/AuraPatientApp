@@ -57,6 +57,7 @@ class AddSportsToEpisodeController: UIViewController {
                                     
                                     let newSport = Sport(description: description, intensity: intensity, place: place, climate: climate, hydration: hydrationText, episode: episode!)
                                     episode!.sports.append(newSport)
+                                    println("**********")
                                 }
                             }
                         }
@@ -79,13 +80,51 @@ class AddSportsToEpisodeController: UIViewController {
                                     
                                     let newSport = Sport(description: description, intensity: intensity, place: place, climate: climate, hydration: hydrationText, episode: episode!)
                                     episode!.sports.append(newSport)
+                                    println("**********")
                                 }
                             }
                         }
                     }
                 }
             }
-            println(episode!)
+            
+            
+            //let dataObject: NSData = episode!.toJson()
+            
+            //let episodeDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject, options: nil, error: nil) as NSDictionary
+            
+            //println("***!!!***")
+            //println(episode!)
+            
+            println("-------!!!!!!-------")
+            println(episode!.toDictionary())
+            println("-------!!!!!!-------")
+            
+            
+            if NSJSONSerialization.isValidJSONObject(episode!.toDictionary()) {
+                var err: NSError?
+                let dataObject: NSData = NSJSONSerialization.dataWithJSONObject(episode!.toDictionary(), options: nil, error: &err)!
+                
+                println("--------------")
+                println(episode!.stress)
+                
+                let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/\(patient!.id)/episode)")
+                
+                let request = NSMutableURLRequest(URL: baseURL!)
+                request.HTTPMethod = "POST"
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                request.HTTPBody = dataObject
+                
+                let response = NSURLResponse()
+                let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
+                
+                println(dataObject)
+                
+                //let task = NSURLSession.sharedSession().uploadTaskWithRequest(request, fromData: dataObject)
+                //task.resume()
+                
+                
+            }
         }
     }
     

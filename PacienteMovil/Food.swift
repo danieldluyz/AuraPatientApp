@@ -27,4 +27,10 @@ struct Food {
         self.episode = episode
     }
     
+    func toDictionary() -> NSDictionary {
+        
+        let dictionary = NSDictionary(objects: [name, quantity], forKeys: ["name", "quantity"])
+        return dictionary
+    }
+    
 }

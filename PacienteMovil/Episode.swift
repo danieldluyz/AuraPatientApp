@@ -76,4 +76,39 @@ struct Episode {
         self.stress = stress
         self.patientId = patientId
     }
+    
+    func toDictionary() -> NSDictionary {
+        
+        var sportsArray: NSMutableArray = NSMutableArray()
+        
+        for sport in sports{
+            let dictionary = sport.toDictionary()
+            sportsArray.addObject(dictionary)
+        }
+        
+        var symptomsArray: NSMutableArray = NSMutableArray()
+        
+        for symptom in symptoms{
+            let dictionary = symptom.toDictionary()
+            symptomsArray.addObject(dictionary)
+        }
+        
+        var medicinesArray: NSMutableArray = NSMutableArray()
+        
+        for medicine in medicines{
+            let dictionary = medicine.toDictionary()
+            medicinesArray.addObject(dictionary)
+        }
+        
+        var foodsArray: NSMutableArray = NSMutableArray()
+        
+        for food in foods{
+            let dictionary = food.toDictionary()
+            foodsArray.addObject(dictionary)
+        }
+        
+        let dictionary = NSDictionary(objects: [strength, stress, normalSleepingCycle, place, stress, symptomsArray, sportsArray, foodsArray, medicinesArray], forKeys: ["intensity", "sleepHours", "regularSleep", "location", "stress", "symptoms", "sports", "foods", "medicines"])
+        
+        return dictionary
+    }
 }

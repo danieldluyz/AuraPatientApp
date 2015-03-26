@@ -52,7 +52,7 @@ class ShowSportsController: UIViewController {
                 {
                     let firstSport = sports[0]
                     
-                    labelDescription1.text = "Description: \(firstSport.description.description)"
+                    labelDescription1.text = "Description: \(firstSport.desc.description)"
                     labelIntensity1.text = "Intensity: \(firstSport.intensity.description)"
                     labelPlace1.text = "Place: \(firstSport.place.description)"
                     labelClimate1.text = "Climate: \(firstSport.climate.description)"
@@ -60,7 +60,7 @@ class ShowSportsController: UIViewController {
                     
                     let secondSport = sports[1]
                     
-                    labelDescription2.text = "Description: \(secondSport.description.description)"
+                    labelDescription2.text = "Description: \(secondSport.desc.description)"
                     labelIntensity2.text = "Intensity: \(secondSport.intensity.description)"
                     labelPlace2.text = "Place: \(secondSport.place.description)"
                     labelClimate2.text = "Climate: \(secondSport.climate.description)"
@@ -70,7 +70,7 @@ class ShowSportsController: UIViewController {
                 {
                     let firstSport = sports[0]
                     
-                    labelDescription1.text = firstSport.description.description
+                    labelDescription1.text = firstSport.desc.description
                     labelIntensity1.text = firstSport.intensity.description
                     labelPlace1.text = firstSport.place.description
                     labelClimate1.text = firstSport.climate.description
