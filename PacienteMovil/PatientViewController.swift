@@ -109,6 +109,7 @@ class PatientViewController: UIViewController {
                 
                 println("yyyyyyyyyyyy")
                 let aViewController = segue.destinationViewController as AudioViewController
+                aViewController.patient = patient!
                 
 
                             

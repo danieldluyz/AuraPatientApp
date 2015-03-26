@@ -27,6 +27,8 @@ class AddSportsToEpisodeController: UIViewController {
     @IBOutlet weak var sportClimate2: UITextField!
     @IBOutlet weak var sportHydration2: UITextField!
     
+    let net = Net()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -101,28 +103,38 @@ class AddSportsToEpisodeController: UIViewController {
             println("-------!!!!!!-------")
             
             
+            
             if NSJSONSerialization.isValidJSONObject(episode!.toDictionary()) {
                 var err: NSError?
+                
                 let dataObject: NSData = NSJSONSerialization.dataWithJSONObject(episode!.toDictionary(), options: nil, error: &err)!
                 
                 println("--------------")
                 println(episode!.stress)
                 
-                let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/\(patient!.id)/episode)")
+                let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/\(patient!.id)/episode")
                 
                 let request = NSMutableURLRequest(URL: baseURL!)
                 request.HTTPMethod = "POST"
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
                 request.HTTPBody = dataObject
                 
-                let response = NSURLResponse()
-                let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
                 
-                println(dataObject)
-                
+                var response: NSURLResponse?
+                //let connection = NSURLConnection(request: request, delegate: self, startImmediately: true)
+                //println(dataObject)
                 //let task = NSURLSession.sharedSession().uploadTaskWithRequest(request, fromData: dataObject)
                 //task.resume()
                 
+                var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) as NSData?
+                
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    println("error \(httpResponse.statusCode)")
+                    
+                    let notificationDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as NSDictionary
+                    
+                    println(notificationDictionary)
+                }
                 
             }
         }

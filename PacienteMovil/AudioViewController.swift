@@ -14,6 +14,9 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
     var audioRecorder:AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     
+    var patient: Patient!
+    var filePath: String?
+    
     @IBOutlet weak var recordlabel: UIButton!
     @IBOutlet weak var stopButt: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
@@ -42,10 +45,11 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
         let currentDateTime = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "ddMMyyyy-HHmmss"
-        let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
+        let recordingName = "grabacion.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         println(filePath)
+        self.filePath = dirPath
         
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
@@ -70,16 +74,22 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
             recordlabel.enabled = true
             stopButt.hidden = true
             
+           
+            
         }
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "stopRecording"){
-            let playSoundsVC: DoneViewController = segue.destinationViewController as DoneViewController
             
-            let data = sender as RecordedAudio
-            playSoundsVC.recivedAudio = data
+                
+                
+                let playSoundsVC: DoneViewController = segue.destinationViewController as DoneViewController
+                
+                let data = sender as RecordedAudio
+                playSoundsVC.recivedAudio = data
+
         }
     }
     
@@ -90,6 +100,58 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
+        
+        if let f = filePath? {
+            
+            let url = "http://aura-app.herokuapp.com/api"
+            
+            //        var p = SRWebClient.GET(url + "/doctor",
+            //            success: {(response:AnyObject!, status:Int) -> Void in
+            //                let headersJSON = response! as NSArray
+            //                println("Hola: \(headersJSON)")
+            //        },failure: {(error:NSError!) -> Void in
+            //                println(error!.code)
+            //        })
+            
+            let net = Net()
+            //        var parames : NSDictionary = ["hola" : "hola"]
+            //        net.GET(url + "/doctor", params: nil, successHandler: { responseData in
+            //            let data : NSData = responseData.data
+            //            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            //
+            //            let jsonResult : NSArray = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error:error) as NSArray
+            //
+            //            }, failureHandler: { error in
+            //                NSLog("Error")
+            //        })
+            
+    
+            let sound : NSData = NSData(contentsOfFile: filePath!+"/grabacion.wav")!
+            //
+            //        let params = ["upload": NetData(data: sound, mimeType: MimeType(rawValue:"audio/ogg")!, filename: "sebastian.wav")]
+            //
+            //        net.POST(url + "/", params: params, successHandler: { responseData in
+            //            let result = responseData.json(error: nil)
+            //            NSLog("result: \(result)")
+            //            }, failureHandler: { error in
+            //                NSLog("Error")
+            //        })
+            
+            //        let image = UIImage(named: "salasEstudioImg")
+            //        let imageData = UIImagePNGRepresentation(image)
+            
+            //        let params = ["upload": NetData(pngImage: img, filename: "myIcon.png")]
+            let params = ["upload": NetData(data: sound, mimeType: MimeType.Json, filename: "temp.wav")]
+            
+            net.POST(url + "/patient/\(patient!.id)/voice_episode", params: params, successHandler: { responseData in
+                let result = responseData.json(error: nil)
+                NSLog("result: \(result)")
+                }, failureHandler: { error in
+                    NSLog("Error")
+            })
+        }
+        
+        
     }
 }
 
