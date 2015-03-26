@@ -60,7 +60,7 @@ class ShowNotificationsController: UIViewController {
     @IBAction func goBackHome(sender: AnyObject) {
         if patient != nil {
             if episode != nil {
-                //performSegueWithIdentifier("goBackHome", sender: sender)
+                performSegueWithIdentifier("goBackHome", sender: sender)
             }
         }
     }
@@ -72,8 +72,8 @@ class ShowNotificationsController: UIViewController {
             if episode != nil {
                 if segue.identifier == "goBackHome" {
                     
-                    //let patientViewController = segue.destinationViewController as PatientViewController
-                    //patientViewController.patient = patient
+                    let patientViewController = segue.destinationViewController as PatientViewController
+                    patientViewController.patient = patient
                 }
             }
         }

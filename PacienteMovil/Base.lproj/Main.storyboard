@@ -1303,12 +1303,6 @@
                                     <action selector="showFoods:" destination="VlI-jg-U7f" eventType="touchUpInside" id="0jg-dC-zCA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b7-WB-tsB">
-                                <rect key="frame" x="117" y="434" width="86" height="30"/>
-                                <state key="normal" title="Notifications">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqJ-zv-pnw">
                                 <rect key="frame" x="30" y="510" width="82" height="30"/>
                                 <state key="normal" title="View Sports">
@@ -1329,7 +1323,6 @@
                             <constraint firstItem="bEP-Pp-WTh" firstAttribute="trailing" secondItem="ib7-Af-teh" secondAttribute="trailingMargin" id="3Zh-Jz-qWK"/>
                             <constraint firstAttribute="centerX" secondItem="PHn-rf-z3Q" secondAttribute="centerX" constant="88.5" id="5KV-af-5KY"/>
                             <constraint firstAttribute="centerY" secondItem="i2a-Me-RoT" secondAttribute="centerY" constant="-89.5" id="5un-o3-sJg"/>
-                            <constraint firstAttribute="centerY" secondItem="8b7-WB-tsB" secondAttribute="centerY" constant="-165" id="6B7-cj-MJr"/>
                             <constraint firstAttribute="centerY" secondItem="hrS-rY-J20" secondAttribute="centerY" constant="-64.5" id="6lE-eL-hl9"/>
                             <constraint firstAttribute="centerY" secondItem="bEP-Pp-WTh" secondAttribute="centerY" constant="-241" id="7VY-ih-ZjZ"/>
                             <constraint firstItem="Bbx-f9-LNK" firstAttribute="leading" secondItem="ib7-Af-teh" secondAttribute="leadingMargin" constant="5" id="A5D-ze-xre"/>
@@ -1344,7 +1337,6 @@
                             <constraint firstAttribute="centerY" secondItem="WsN-L0-UMK" secondAttribute="centerY" constant="106" id="PVb-bp-Osw"/>
                             <constraint firstAttribute="centerY" secondItem="Bbx-f9-LNK" secondAttribute="centerY" constant="18.5" id="SMX-Y1-4vh"/>
                             <constraint firstAttribute="centerY" secondItem="h6u-iU-0M3" secondAttribute="centerY" constant="18.5" id="U4u-yf-uYX"/>
-                            <constraint firstAttribute="centerX" secondItem="8b7-WB-tsB" secondAttribute="centerX" id="UpU-Ra-li7"/>
                             <constraint firstAttribute="centerX" secondItem="hrS-rY-J20" secondAttribute="centerX" constant="112.5" id="VDg-1X-hTO"/>
                             <constraint firstItem="i2a-Me-RoT" firstAttribute="leading" secondItem="O8Z-u9-Xl5" secondAttribute="trailing" constant="8" id="Wo9-Dj-G2z"/>
                             <constraint firstAttribute="centerX" secondItem="yuq-cD-MTO" secondAttribute="centerX" constant="75" id="Wtm-bq-VXf"/>
@@ -2100,31 +2092,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Intensity" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-Wh-OdZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Intensity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-Wh-OdZ">
                                 <rect key="frame" x="26" y="423" width="117" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Place" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-vW-m0Q">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNP-vW-m0Q">
                                 <rect key="frame" x="159" y="423" width="125" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-C6-mrS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-C6-mrS">
                                 <rect key="frame" x="26" y="385" width="258" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Climate" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRM-A6-3fW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Climate" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRM-A6-3fW">
                                 <rect key="frame" x="26" y="461" width="117" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hydratation" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTi-OB-BnL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydratation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTi-OB-BnL">
                                 <rect key="frame" x="159" y="461" width="125" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2148,31 +2140,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Intensity" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cg4-nb-8Xt">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Intensity" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cg4-nb-8Xt">
                                 <rect key="frame" x="26" y="258" width="117" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Place" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11P-0e-oCu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11P-0e-oCu">
                                 <rect key="frame" x="159" y="258" width="125" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nn-00-Dze">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Nn-00-Dze">
                                 <rect key="frame" x="26" y="220" width="258" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Climate" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKT-y0-Z0m">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Climate" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKT-y0-Z0m">
                                 <rect key="frame" x="26" y="296" width="117" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hydratation" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-iQ-VQA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hydratation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-iQ-VQA">
                                 <rect key="frame" x="159" y="296" width="125" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2360,11 +2352,12 @@
                         <outlet property="fourthNotificationLabel" destination="fgN-gW-toQ" id="lAN-aW-QaW"/>
                         <outlet property="secondNotificationLabel" destination="jPV-43-aDM" id="8cv-q2-xa3"/>
                         <outlet property="thirdNotificationLabel" destination="6uT-aw-eM4" id="SzN-KO-pdb"/>
+                        <segue destination="hVP-R8-vzu" kind="push" identifier="goBackHome" id="FPh-YB-6SV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIa-ya-GRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4312" y="-386"/>
+            <point key="canvasLocation" x="4295" y="-386"/>
         </scene>
         <!--Medicines-->
         <scene sceneID="X4O-7w-3LX">
@@ -2597,6 +2590,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="FPh-YB-6SV"/>
         <segue reference="Er9-k9-Yjo"/>
     </inferredMetricsTieBreakers>
 </document>
