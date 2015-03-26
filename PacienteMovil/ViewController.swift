@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         if segue.identifier == "getPatient" {
             
-            let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/)")
+            let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/")
             let patientURL = NSURL(string: textID.text, relativeToURL: baseURL)
             
             

@@ -21,6 +21,7 @@ struct Episode {
     var sports: [Sport] = []
     var foods: [Food] = []
     var medicines: [Medicine] = []
+    var notification: Notification?
     
     init (episodeDictionary: NSDictionary, patientId: String) {
         

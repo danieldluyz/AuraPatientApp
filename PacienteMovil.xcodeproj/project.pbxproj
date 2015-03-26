@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8E34F3EE1ABF36C9008979F8 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */; };
 		8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */; };
+		8E3AD9031AC3C59C00A5445C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3AD9021AC3C59C00A5445C /* Notification.swift */; };
+		8E3AD9051AC3C5C700A5445C /* ShowNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3AD9041AC3C5C700A5445C /* ShowNotificationsController.swift */; };
 		8E6B1DC31AC10FC0007B7980 /* Symptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B1DC21AC10FC0007B7980 /* Symptom.swift */; };
 		8E863E271AC11C660072E3C5 /* ShowSymptomsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */; };
 		8EAC8A281ABF5F7C00AF58A2 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 		8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		8E3AD9021AC3C59C00A5445C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8E3AD9041AC3C5C700A5445C /* ShowNotificationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowNotificationsController.swift; sourceTree = "<group>"; };
 		8E6B1DC21AC10FC0007B7980 /* Symptom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symptom.swift; sourceTree = "<group>"; };
 		8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowSymptomsController.swift; sourceTree = "<group>"; };
 		8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
@@ -164,12 +168,14 @@
 				8E34F3ED1ABF36C9008979F8 /* EpisodeDetailViewController.swift */,
 				8EC0C9971AC1AC78009D1EFF /* Food.swift */,
 				8EC0C9991AC1B336009D1EFF /* Medicine.swift */,
+				8E3AD9021AC3C59C00A5445C /* Notification.swift */,
 				8EAC8A271ABF5F7C00AF58A2 /* Patient.swift */,
 				8E34F3EF1ABF37AB008979F8 /* PatientViewController.swift */,
 				E5DC62781AC27855000277E0 /* RecordedAudio.swift */,
 				8EAC8A2B1ABFA24800AF58A2 /* SearchController.swift */,
 				8EC0C9951AC1AC34009D1EFF /* ShowFoodController.swift */,
 				8EC0C99B1AC1B472009D1EFF /* ShowMedicinesViewController.swift */,
+				8E3AD9041AC3C5C700A5445C /* ShowNotificationsController.swift */,
 				8EAC8A2D1ABFB50100AF58A2 /* ShowResultsController.swift */,
 				8EC0C9911AC1A087009D1EFF /* ShowSportsController.swift */,
 				8E863E261AC11C660072E3C5 /* ShowSymptomsController.swift */,
@@ -315,9 +321,11 @@
 				8EAD881F1AC396C600589CDE /* NetDownloadTask.swift in Sources */,
 				8EC0C99A1AC1B336009D1EFF /* Medicine.swift in Sources */,
 				E54158891ABEFF33001746FF /* ViewController.swift in Sources */,
+				8E3AD9051AC3C5C700A5445C /* ShowNotificationsController.swift in Sources */,
 				E5DC62771AC27790000277E0 /* DoneViewController.swift in Sources */,
 				8EAC8A2A1ABF600600AF58A2 /* Episode.swift in Sources */,
 				E54158D71AC12C87001746FF /* AddEpisodeNormalController.swift in Sources */,
+				8E3AD9031AC3C59C00A5445C /* Notification.swift in Sources */,
 				8E34F3F01ABF37AB008979F8 /* PatientViewController.swift in Sources */,
 				8EAC8A2C1ABFA24800AF58A2 /* SearchController.swift in Sources */,
 				8EAD881E1AC396C600589CDE /* NetData.swift in Sources */,

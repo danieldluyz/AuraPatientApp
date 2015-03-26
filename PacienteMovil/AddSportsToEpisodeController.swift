@@ -134,6 +134,15 @@ class AddSportsToEpisodeController: UIViewController {
                     let notificationDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as NSDictionary
                     
                     println(notificationDictionary)
+                    
+                    let notification = Notification(sportDictionary: notificationDictionary, episode: episode!)
+                    episode!.notification = notification
+                    
+                    println(notificationDictionary)
+                    
+                    let showNotificationsController = segue.destinationViewController as ShowNotificationsController
+                    showNotificationsController.patient = patient!
+                    showNotificationsController.episode = episode!
                 }
                 
             }
