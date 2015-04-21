@@ -15,6 +15,7 @@ class Patient {
     var id: String = ""
     var mail: String
     var episodes: [Episode] = []
+    var token = ""
     
     init (patientDictionary: NSDictionary) {
         

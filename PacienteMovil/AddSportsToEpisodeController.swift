@@ -117,6 +117,12 @@ class AddSportsToEpisodeController: UIViewController {
                 let request = NSMutableURLRequest(URL: baseURL!)
                 request.HTTPMethod = "POST"
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                
+                var encriptador: Security = Security()
+                var tokenEncriptado = encriptador.encriptando(patient!.token)
+                
+                request.addValue("\(tokenEncriptado)", forHTTPHeaderField: "auth-token")
+                
                 request.HTTPBody = dataObject
                 
                 

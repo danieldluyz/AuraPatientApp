@@ -110,10 +110,11 @@ class PatientViewController: UIViewController {
                 println("yyyyyyyyyyyy")
                 let aViewController = segue.destinationViewController as AudioViewController
                 aViewController.patient = patient!
+            }
+            
+            else if segue.identifier == "logout" {
                 
-
-                            
-                
+                let viewController = segue.destinationViewController as ViewController
             }
         }
         

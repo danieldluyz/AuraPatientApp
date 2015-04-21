@@ -141,6 +141,8 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
             //        let imageData = UIImagePNGRepresentation(image)
             
             //        let params = ["upload": NetData(pngImage: img, filename: "myIcon.png")]
+            
+            
             let params = ["upload": NetData(data: sound, mimeType: MimeType.Json, filename: "temp.wav")]
             
             net.POST(url + "/patient/\(patient!.id)/voice_episode", params: params, successHandler: { responseData in
