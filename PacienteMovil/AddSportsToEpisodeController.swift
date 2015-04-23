@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-class AddSportsToEpisodeController: UIViewController {
+class AddSportsToEpisodeController: UIViewController,  UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
     var patient: Patient?
     var episode: Episode?
+    var tag: Int = 1
     
     @IBOutlet weak var sportDescriptionLabel1: UITextField!
     @IBOutlet weak var sportIntensity1: UITextField!
     @IBOutlet weak var sportPlace1: UITextField!
     @IBOutlet weak var sportClimate1: UITextField!
     @IBOutlet weak var sportHydration1: UITextField!
-    
     
     @IBOutlet weak var sportDescriptionLabel2: UITextField!
     @IBOutlet weak var sportIntensity2: UITextField!
@@ -29,9 +29,41 @@ class AddSportsToEpisodeController: UIViewController {
     
     let net = Net()
     
+    @IBOutlet weak var sportPicker: UIPickerView!
+    
+    let sports = ["No activity", "American Football", "Baseball", "Basketball", "Bowling",
+        "Football", "Dancing", "Football", "Golf", "Hockey", "Ping-Pong",
+        "Rugby", "Running", "Swimming", "Tennis", "Volleyball", "Walking", "Other"]
+    
+    let trueorfalse = ["False", "True"]
+    
+    let climate = ["Sunny", "Partly sunny", "Cloudy", "Raining", "Thunderstorm", "Snowing"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        sportDescriptionLabel1.delegate = self
+        sportDescriptionLabel2.delegate = self
+        sportIntensity1.delegate = self
+        sportIntensity2.delegate = self
+        sportClimate1.delegate = self
+        sportClimate2.delegate = self
+        sportHydration1.delegate = self
+        sportHydration2.delegate = self
+        
+        sportDescriptionLabel1.text = sports[0]
+        sportDescriptionLabel2.text = sports[0]
+        sportIntensity1.text = trueorfalse[0]
+        sportIntensity2.text = trueorfalse[0]
+        sportClimate1.text = climate[0]
+        sportClimate2.text = climate[0]
+        sportHydration1.text = trueorfalse[0]
+        sportHydration2.text = trueorfalse[0]
+        
+        sportPicker.delegate = self
+        sportPicker.dataSource = self
+        sportPicker.hidden = true
         
     }
     
@@ -44,13 +76,13 @@ class AddSportsToEpisodeController: UIViewController {
         
         if segue.identifier == "addEpisode" {
             
-            if sportDescriptionLabel1.text != "" && sportIntensity1.text != "" && sportPlace1.text != "" && sportClimate1.text != "" && sportHydration1.text != ""
+            if sportDescriptionLabel1.text != sports[0] && sportIntensity1.text != "" && sportPlace1.text != "" && sportClimate1.text != climate[0] && sportHydration1.text != ""
             {
-                if let description = sportDescriptionLabel1.text.toInt() {
-                    if let intensity = sportIntensity1.text.toInt(){
+                if let description = find(sports, sportDescriptionLabel1.text) {
+                    if let intensity = find(trueorfalse, sportDescriptionLabel1.text) {
                         if let place = sportPlace1.text.toInt(){
-                            if let climate = sportClimate1.text.toInt(){
-                                if let hydration = sportHydration1.text.toInt(){
+                            if let climate = find(climate, sportClimate1.text){
+                                if let hydration = find(trueorfalse, sportHydration1.text){
                                     
                                     var hydrationText = false
                                     if hydration == 1 {
@@ -67,13 +99,13 @@ class AddSportsToEpisodeController: UIViewController {
                 }
             }
             
-            if sportDescriptionLabel2.text != "" && sportIntensity2.text != "" && sportPlace2.text != "" && sportClimate2.text != "" && sportHydration2.text != ""
+            if sportDescriptionLabel2.text != sports[0] && sportIntensity2.text != "" && sportPlace2.text != "" && sportClimate2.text != climate[0] && sportHydration2.text != ""
             {
-                if let description = sportDescriptionLabel2.text.toInt() {
-                    if let intensity = sportIntensity2.text.toInt(){
+                if let description = find(sports, sportDescriptionLabel2.text) {
+                    if let intensity = find(trueorfalse, sportIntensity2.text) {
                         if let place = sportPlace2.text.toInt(){
-                            if let climate = sportClimate2.text.toInt(){
-                                if let hydration = sportHydration2.text.toInt(){
+                            if let climate = find(climate, sportClimate2.text){
+                                if let hydration = find(trueorfalse, sportHydration2.text){
                                     
                                     var hydrationText = false
                                     if hydration == 1 {
@@ -137,7 +169,7 @@ class AddSportsToEpisodeController: UIViewController {
                 if let httpResponse = response as? NSHTTPURLResponse {
                     println("error \(httpResponse.statusCode)")
                     
-                    let notificationDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as NSDictionary
+                    let notificationDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as! NSDictionary
                     
                     println(notificationDictionary)
                     
@@ -146,7 +178,7 @@ class AddSportsToEpisodeController: UIViewController {
                     
                     println(notificationDictionary)
                     
-                    let showNotificationsController = segue.destinationViewController as ShowNotificationsController
+                    let showNotificationsController = segue.destinationViewController as! ShowNotificationsController
                     showNotificationsController.patient = patient!
                     showNotificationsController.episode = episode!
                 }
@@ -161,6 +193,124 @@ class AddSportsToEpisodeController: UIViewController {
                 performSegueWithIdentifier("addEpisode", sender: sender)
             }
         }
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        return 1;
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        if (tag == 1 || tag == 2){
+            return self.sports.count
+        }
+        else if (tag == 3 || tag == 4){
+            return self.trueorfalse.count
+        }
+        else if (tag == 5 || tag == 6){
+            return self.climate.count
+        }
+        else if (tag == 7 || tag == 8){
+            return self.trueorfalse.count
+        }
+        
+        return 0
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        if (tag == 1 || tag == 2){
+            return self.sports[row]
+        }
+        else if (tag == 3 || tag == 4){
+            return self.trueorfalse[row]
+        }
+        else if (tag == 5 || tag == 6){
+            return self.climate[row]
+        }
+        else if (tag == 7 || tag == 8){
+            return self.trueorfalse[row]
+        }
+        
+        return ""
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(tag == 1){
+            self.sportDescriptionLabel1.text = self.sports[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 2){
+            self.sportDescriptionLabel2.text = self.sports[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 3){
+            self.sportIntensity1.text = self.trueorfalse[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 4){
+            self.sportIntensity2.text = self.trueorfalse[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 5){
+            self.sportClimate1.text = self.climate[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 6){
+            self.sportClimate2.text = self.climate[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 7){
+            self.sportHydration1.text = self.trueorfalse[row];
+            sportPicker.hidden = true
+        }
+        else if(tag == 8){
+            self.sportHydration2.text = self.trueorfalse[row];
+            sportPicker.hidden = true
+        }
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        
+        if(textField.tag == 1){
+            tag = 1
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 2){
+            tag = 2
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 3){
+            tag = 3
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 4){
+            tag = 4
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 5){
+            tag = 5
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 6){
+            tag = 6
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 7){
+            tag = 7
+            sportPicker.reloadAllComponents()
+        }
+        else if(textField.tag == 8){
+            tag = 8
+            sportPicker.reloadAllComponents()
+        }
+        
+        sportPicker.hidden = false
+        
+        return false
     }
     
 }

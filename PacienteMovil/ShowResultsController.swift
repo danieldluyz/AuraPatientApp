@@ -112,7 +112,7 @@ class ShowResultsController: UIViewController {
                     
                     let episode = episodes![index]
                     
-                    let episodeDetailsViewController = segue.destinationViewController as EpisodeDetailViewController
+                    let episodeDetailsViewController = segue.destinationViewController as! EpisodeDetailViewController
                     episodeDetailsViewController.patient = patient
                     episodeDetailsViewController.episode = episode
                     

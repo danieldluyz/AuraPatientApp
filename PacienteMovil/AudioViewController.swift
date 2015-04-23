@@ -40,12 +40,12 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
         stopButt.hidden = false
         recordingInProgress.hidden = false
         recordlabel.enabled = false
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         
         let currentDateTime = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "ddMMyyyy-HHmmss"
-        let recordingName = "grabacion.wav"
+        let recordingName = "sebastian.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
         println(filePath)
@@ -74,7 +74,7 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
             recordlabel.enabled = true
             stopButt.hidden = true
             
-           
+            
             
         }
     }
@@ -83,13 +83,14 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "stopRecording"){
             
-                
-                
-                let playSoundsVC: DoneViewController = segue.destinationViewController as DoneViewController
-                
-                let data = sender as RecordedAudio
-                playSoundsVC.recivedAudio = data
-
+            
+            
+            let playSoundsVC: DoneViewController = segue.destinationViewController as! DoneViewController
+            
+            let data = sender as! RecordedAudio
+            playSoundsVC.recivedAudio = data
+            playSoundsVC.patient = patient!
+            
         }
     }
     
@@ -101,7 +102,7 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
         
-        if let f = filePath? {
+        if let f = filePath {
             
             let url = "http://aura-app.herokuapp.com/api"
             
@@ -125,7 +126,7 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
             //                NSLog("Error")
             //        })
             
-    
+            
             let sound : NSData = NSData(contentsOfFile: filePath!+"/grabacion.wav")!
             //
             //        let params = ["upload": NetData(data: sound, mimeType: MimeType(rawValue:"audio/ogg")!, filename: "sebastian.wav")]
@@ -151,10 +152,40 @@ class AudioViewController: UIViewController,AVAudioRecorderDelegate {
                 }, failureHandler: { error in
                     NSLog("Error")
             })
+            
+//            var err: NSError?
+//            
+//            let baseURL = NSURL(string: "http://aura-app.herokuapp.com/api/patient/\(patient!.id)/voice_episode")
+//            
+//            let request = NSMutableURLRequest(URL: baseURL!)
+//            request.HTTPMethod = "POST"
+//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//            
+//            var encriptador: Security = Security()
+//            var tokenEncriptado = encriptador.encriptando(patient!.token)
+//            
+//            request.addValue("\(tokenEncriptado)", forHTTPHeaderField: "auth-token")
+//            
+//            var address = "\(f)/sebastian.wav"
+//            let sound : NSData = NSData(contentsOfFile: address)!
+//            
+//            let dictionary: NSDictionary = NSDictionary(dictionary: Dictionary(dictionaryLiteral: ("upload", sound), ("mimetype","application-json"), ("filename", "sebastian.wav")))
+//            
+//            var myData: NSData =  NSKeyedArchiver.archivedDataWithRootObject(dictionary)
+//            
+//            let params: NSData = myData
+//        
+//            request.HTTPBody = params
+//    
+//            var response: NSURLResponse?
+//            
+//            var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) as NSData?
+//            
+//            if let httpResponse = response as? NSHTTPURLResponse {
+//                println("error \(httpResponse.statusCode)")
+//                println(httpResponse.description)
+//            }
+            
         }
-        
-        
     }
 }
-
-

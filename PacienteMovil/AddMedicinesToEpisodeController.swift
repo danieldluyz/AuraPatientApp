@@ -66,7 +66,7 @@ class AddMedicinesToEpisodeController: UIViewController {
                 }
             }
             
-            let addSportsController = segue.destinationViewController as AddSportsToEpisodeController
+            let addSportsController = segue.destinationViewController as! AddSportsToEpisodeController
             addSportsController.patient = patient
             addSportsController.episode = episode
             

@@ -15,8 +15,8 @@ struct Medicine {
     var episode: Episode?
     
     init(medicineDictionary: NSDictionary, episode: Episode){
-        self.name = medicineDictionary["name"] as String
-        self.hoursAgo = medicineDictionary["hoursAgo"] as Int
+        self.name = medicineDictionary["name"] as! String
+        self.hoursAgo = medicineDictionary["hoursAgo"] as! Int
         self.episode = episode
     }
     

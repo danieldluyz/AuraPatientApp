@@ -14,7 +14,7 @@ struct Symptom {
     var episode: Episode
     
     init(symptomDictionary: NSDictionary, episode: Episode){
-        self.symptom = symptomDictionary["symptom"] as Int
+        self.symptom = symptomDictionary["symptom"] as! Int
         self.episode = episode
     }
     

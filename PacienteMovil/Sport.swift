@@ -18,11 +18,11 @@ struct Sport {
     var episode: Episode
     
     init(sportDictionary: NSDictionary, episode: Episode){
-        self.desc = sportDictionary["description"] as Int
-        self.intensity = sportDictionary["intensity"] as Int
-        self.place = sportDictionary["place"] as Int
-        self.climate = sportDictionary["climate"] as Int
-        self.hydration = sportDictionary["hydration"] as Bool
+        self.desc = sportDictionary["description"] as! Int
+        self.intensity = sportDictionary["intensity"] as! Int
+        self.place = sportDictionary["place"] as! Int
+        self.climate = sportDictionary["climate"] as! Int
+        self.hydration = sportDictionary["hydration"] as! Bool
         self.episode = episode
     }
     

@@ -222,8 +222,10 @@ class gcd
     *  @param GCDApplyClosure :  the block will be run
     *
     */
-    class func apply(queueType: QueueType, interators: UInt, closure: GCDApplyClosure) {
-        dispatch_apply(interators, queueType.getQueue(), closure)
+    class func apply(queueType: QueueType, interators: UInt, closure: (Int) -> ()) {
+        
+        dispatch_apply(Int(interators), queueType.getQueue(), closure)
+        
     }
     
     /**
@@ -237,4 +239,6 @@ class gcd
     class func once(predicate: UnsafeMutablePointer<dispatch_once_t>, closure: GCDClosure) {
         dispatch_once(predicate, closure)
     }
+    
 }
+

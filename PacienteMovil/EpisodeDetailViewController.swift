@@ -49,22 +49,22 @@ class EpisodeDetailViewController: UIViewController {
         
         if patient != nil {
             if segue.identifier == "showSymptoms" {
-                let symptomViewController = segue.destinationViewController as ShowSymptomController
+                let symptomViewController = segue.destinationViewController as! ShowSymptomController
                 symptomViewController.patient = patient
                 symptomViewController.episode = episode
             }
             else if segue.identifier == "showSports" {
-                let sportsViewController = segue.destinationViewController as ShowSportsController
+                let sportsViewController = segue.destinationViewController as! ShowSportsController
                 sportsViewController.patient = patient
                 sportsViewController.episode = episode
             }
             else if segue.identifier == "showFoods" {
-                let foodsViewController = segue.destinationViewController as ShowFoodController
+                let foodsViewController = segue.destinationViewController as! ShowFoodController
                 foodsViewController.patient = patient
                 foodsViewController.episode = episode
             }
             else if segue.identifier == "showMedicines" {
-                let medicinesViewController = segue.destinationViewController as ShowMedicinesViewController
+                let medicinesViewController = segue.destinationViewController as! ShowMedicinesViewController
                 medicinesViewController.patient = patient
                 medicinesViewController.episode = episode
             }

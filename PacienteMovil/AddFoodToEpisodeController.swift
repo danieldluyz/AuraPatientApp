@@ -65,7 +65,7 @@ class AddFoodToEpisodeController: UIViewController {
                 }
             }
             
-            let addMedicinesController = segue.destinationViewController as AddMedicinesToEpisodeController
+            let addMedicinesController = segue.destinationViewController as! AddMedicinesToEpisodeController
             addMedicinesController.patient = patient
             addMedicinesController.episode = episode
             

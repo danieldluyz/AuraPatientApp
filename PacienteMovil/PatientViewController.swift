@@ -90,31 +90,31 @@ class PatientViewController: UIViewController {
                 
                 let episode = episodes[count-index]
                 
-                let episodeDetailsViewController = segue.destinationViewController as EpisodeDetailViewController
+                let episodeDetailsViewController = segue.destinationViewController as! EpisodeDetailViewController
                 episodeDetailsViewController.patient = patient
                 episodeDetailsViewController.episode = episode
                 
             }
             else if segue.identifier == "searchBetweenDates" {
-                let searchViewController = segue.destinationViewController as SearchController
+                let searchViewController = segue.destinationViewController as! SearchController
                 searchViewController.patient = patient!
             }
             
             else if segue.identifier == "addNewEpisodeRegular" {
-                let addViewController = segue.destinationViewController as AddEpisodeNormalController
+                let addViewController = segue.destinationViewController as! AddEpisodeNormalController
                 addViewController.patient = patient!
             }
             
             else if segue.identifier == "audioSegue" {
                 
                 println("yyyyyyyyyyyy")
-                let aViewController = segue.destinationViewController as AudioViewController
+                let aViewController = segue.destinationViewController as! AudioViewController
                 aViewController.patient = patient!
             }
             
             else if segue.identifier == "logout" {
                 
-                let viewController = segue.destinationViewController as ViewController
+                let viewController = segue.destinationViewController as! ViewController
             }
         }
         
@@ -148,5 +148,4 @@ class PatientViewController: UIViewController {
             performSegueWithIdentifier("addNewEpisodeRegular", sender: sender)
         }
     }
-    
 }

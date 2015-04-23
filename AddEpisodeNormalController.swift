@@ -81,7 +81,7 @@ class AddEpisodeNormalController: UIViewController {
                                     
                                     var episode = Episode(date: episodeDate, strength: strength, timeSlept: timeSlept, normalSleepingCycle: normalSleepingCycle, place: place, stress: stressEpisode, patientId: patient!.id)
                                     
-                                    let addSympthomViewController = segue.destinationViewController as AddSymptomController
+                                    let addSympthomViewController = segue.destinationViewController as! AddSymptomController
                                     addSympthomViewController.episode = episode
                                     addSympthomViewController.patient = patient!
                                     println(addSympthomViewController.episode)

@@ -19,11 +19,11 @@ class Patient {
     
     init (patientDictionary: NSDictionary) {
         
-        self.name = patientDictionary["name"] as String
-        self.gender = patientDictionary["gender"] as Int
+        self.name = patientDictionary["name"] as! String
+        self.gender = patientDictionary["gender"] as! Int
         
-        self.mail = patientDictionary["email"] as String
-        let episodesRetrieved: [NSDictionary] = patientDictionary["episodes"] as [NSDictionary]
+        self.mail = patientDictionary["email"] as! String
+        let episodesRetrieved: [NSDictionary] = patientDictionary["episodes"] as! [NSDictionary]
         
         for episode in episodesRetrieved {
             let newEpisode = Episode(episodeDictionary: episode, patientId: id)

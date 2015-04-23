@@ -60,6 +60,46 @@ class ShowNotificationsController: UIViewController {
     @IBAction func goBackHome(sender: AnyObject) {
         if patient != nil {
             if episode != nil {
+                
+                var err: NSError?
+                
+                let baseURL = NSURL(string: "https://aura-app.herokuapp.com/api/patient/\(patient!.id)")
+                
+                let request = NSMutableURLRequest(URL: baseURL!)
+                request.HTTPMethod = "GET"
+                request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                
+                var encriptador: Security = Security()
+                var tokenEncriptado = encriptador.encriptando(patient!.token)
+                
+                request.addValue("\(tokenEncriptado)", forHTTPHeaderField: "auth-token")
+                request.addValue("PAC", forHTTPHeaderField: "who")
+                request.addValue("\(patient!.id)", forHTTPHeaderField: "id")
+                
+                var response: NSURLResponse?
+                
+                let id = patient!.id
+                let token = patient!.token
+                
+                println(tokenEncriptado)
+                
+                var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: nil) as NSData?
+                
+                
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    
+                    println(httpResponse)
+                    
+                    let patientDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as! NSDictionary
+                    
+                    if patientDictionary.count > 0 {
+                        patient = Patient(patientDictionary: patientDictionary)
+                        patient!.id = id
+                        patient!.token = token
+                        
+                    }
+                }
+
                 performSegueWithIdentifier("goBackHome", sender: sender)
             }
         }
@@ -72,7 +112,7 @@ class ShowNotificationsController: UIViewController {
             if episode != nil {
                 if segue.identifier == "goBackHome" {
                     
-                    let patientViewController = segue.destinationViewController as PatientViewController
+                    let patientViewController = segue.destinationViewController as! PatientViewController
                     patientViewController.patient = patient
                 }
             }

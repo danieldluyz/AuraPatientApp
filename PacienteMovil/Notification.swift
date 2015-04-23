@@ -16,10 +16,10 @@ struct Notification {
     var sleepTime: String
     
     init(sportDictionary: NSDictionary, episode: Episode){
-        self.stress = sportDictionary["estres"] as String
-        self.intensity = sportDictionary["intensidad"] as String
-        self.message = sportDictionary["mensaje"] as String
-        self.sleepTime = sportDictionary["suenio"] as String
+        self.stress = sportDictionary["estres"] as! String
+        self.intensity = sportDictionary["intensidad"] as! String
+        self.message = sportDictionary["mensaje"] as! String
+        self.sleepTime = sportDictionary["suenio"] as! String
     }
     
     func toDictionary() -> NSDictionary {

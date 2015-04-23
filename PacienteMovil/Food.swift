@@ -15,8 +15,8 @@ struct Food {
     var episode: Episode?
     
     init(foodDictionary: NSDictionary, episode: Episode){
-        self.name = foodDictionary["name"] as String
-        self.quantity = foodDictionary["quantity"] as Int
+        self.name = foodDictionary["name"] as! String
+        self.quantity = foodDictionary["quantity"] as! Int
         self.episode = episode
     }
     
